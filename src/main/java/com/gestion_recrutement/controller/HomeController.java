@@ -31,10 +31,6 @@ public class HomeController {
         return "blog"; //
     }
 
-//    @GetMapping("/admin/login")
-//    public String adminLogin() {
-//        return "login"; // Nom du template HTML pour le formulaire de connexion
-//    }
 
 }
 
