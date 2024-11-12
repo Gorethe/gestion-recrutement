@@ -26,8 +26,11 @@ public class AdminController {
                         Model model) {
         // Vérifie l'authentification
         Admin admin = adminService.findByEmailAndPassword(email, motDePasse);
+
         if (admin != null) {
-            return "redirect:/admin/dashboard"; // Redirige vers le tableau de bord si les informations sont correctes
+            model.addAttribute("success", "Connexion réussie");
+            return "redirect:/home"; // Redirige vers /home pour afficher index.html après connexion réussie
+            //return "redirect:/admin/dashboard"; // Redirige vers le tableau de bord si les informations sont correctes
         } else {
             model.addAttribute("error", "Identifiants incorrects");
             return "login"; // Affiche à nouveau le formulaire avec un message d'erreur
