@@ -1,4 +1,4 @@
-package repository;
+package com.gestion_recrutement.repository;
 
 import com.gestion_recrutement.model.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;

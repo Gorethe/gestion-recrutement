@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,14 +29,14 @@
                 </thead>
                 <tbody>
                 <!-- Boucle Thymeleaf pour afficher les utilisateurs -->
-                <tr th:each="utilisateur : ${utilisateurs}">
-                    <td th:text="${utilisateur.id}"></td>
-                    <td th:text="${utilisateur.nom}"></td>
-                    <td th:text="${utilisateur.prenom}"></td>
-                    <td th:text="${utilisateur.email}"></td>
-                    <td th:text="${utilisateur.dateNaissance}"></td>
-                    <td th:text="${utilisateur.classe}"></td>
-                    <td th:text="${utilisateur.telephone}"></td>
+                <tr th:each="inscription : ${inscriptions}">
+                    <td th:text="${inscription.id}"></td>
+                    <td th:text="${inscription.nom}"></td>
+                    <td th:text="${inscription.prenom}"></td>
+                    <td th:text="${inscription.email}"></td>
+                    <td th:text="${inscription.dateNaissance}"></td>
+                    <td th:text="${inscription.classe}"></td>
+                    <td th:text="${inscription.telephone}"></td>
                     <td>
                         <!-- Ajouter des actions comme Modifier ou Supprimer -->
                         <a href="#" class="btn btn-warning btn-sm">Modifier</a>

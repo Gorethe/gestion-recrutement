@@ -1,4 +1,5 @@
 package com.gestion_recrutement.controller;
+import com.gestion_recrutement.model.InscriptionModele;
 
 import com.gestion_recrutement.service.AdminDashboardService;
 import com.gestion_recrutement.model.Utilisateur;
@@ -15,10 +16,10 @@ public class AdminDashboardController {
     @Autowired
     private AdminDashboardService adminDashboardService;
 
-    @GetMapping("/admin/dashboard")
+    @GetMapping("/admin/utilisateurs")
     public String afficherDashboard(Model model) {
-        List<Utilisateur> utilisateurs = adminDashboardService.recupererUtilisateurs();
-        model.addAttribute("utilisateurs", utilisateurs);  // Ajoute la liste des utilisateurs au modèle
-        return "admin/dashboard";  // Retourne la vue correspondante au dashboard
+        List<InscriptionModele> inscriptions = adminDashboardService.recupererInscriptions();
+        model.addAttribute("inscriptions", inscriptions);  // Ajoute la liste des utilisateurs au modèle
+        return "dashboard";  // Retourne la vue correspondante au dashboard
     }
 }

@@ -1,16 +1,14 @@
 package com.gestion_recrutement.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class InscriptionModele {
+public class Utilisateur {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nom;
     private String prenom;
     private String email;
@@ -18,8 +16,7 @@ public class InscriptionModele {
     private String classe;
     private String telephone;
 
-    // Getters et setters
-
+    // Getters et Setters
     public Long getId() {
         return id;
     }
@@ -76,4 +73,3 @@ public class InscriptionModele {
         this.telephone = telephone;
     }
 }
-

@@ -36,9 +36,9 @@ public class AdminController {
             return "login"; // Affiche à nouveau le formulaire avec un message d'erreur
         }
     }
-
-    @GetMapping("/admin/dashboard")
-    public String dashboard() {
-        return "dashboard"; // Affiche le tableau de bord
-    }
+//
+//    @GetMapping("/admin/dashboard")
+//    public String dashboard() {
+//        return "dashboard"; // Affiche le tableau de bord
+//    }
 }
