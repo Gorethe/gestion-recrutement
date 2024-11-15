@@ -602,6 +602,63 @@ a:hover, a:active {
     margin-top: 14px;
 }
 
+.entry-footer {
+    display: flex;
+    gap: 10px; /* Ajoute un espacement entre les deux liens */
+}
+
+.entry-footer a {
+    text-decoration: none; /* Pour enlever les soulignements des liens, si souhaité */
+}
+
+.custom-form {
+    width: 400px; /* Largeur du formulaire */
+    height: 600px; /* Hauteur du formulaire */
+    padding: 20px; /* Espace intérieur pour plus de confort */
+    box-sizing: border-box; /* Inclut le padding dans la largeur et la hauteur */
+    border: 1px solid #ccc; /* Bordure pour délimiter le formulaire */
+    border-radius: 8px; /* Coins arrondis */
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.form-container {
+    margin: 50px auto;
+    padding: 20px;
+   /* background-color: white;  Largeur du conteneur */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    padding: 5px;
+    margin-bottom: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    margin: 1px 0 2px;
+}
+
+.form-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .course-cost {
     font-size: 24px;
     font-weight: 700;
@@ -1892,7 +1949,7 @@ ul.black-doted {
 
 .about-heading,
 .team-heading {
-    margin-top: 80px;
+  /*  margin-top: 80px;  */
     text-align: center;
 }
 
