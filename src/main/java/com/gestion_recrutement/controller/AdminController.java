@@ -1,7 +1,7 @@
 package com.gestion_recrutement.controller;
 
 import com.gestion_recrutement.model.Admin;
-import com.gestion_recrutement.service.AdminService;
+import com.gestion_recrutement.Service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

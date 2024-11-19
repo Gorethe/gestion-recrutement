@@ -1,4 +1,4 @@
-package com.gestion_recrutement.service;  // Déclaration correcte du package
+package com.gestion_recrutement.Service;  // Déclaration correcte du package
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

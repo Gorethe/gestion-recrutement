@@ -1,4 +1,4 @@
-package com.gestion_recrutement.service;
+package com.gestion_recrutement.Service;
 
 import com.gestion_recrutement.model.Admin;
 import com.gestion_recrutement.repository.AdminRepository;

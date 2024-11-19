@@ -312,6 +312,64 @@ a:hover, a:active {
     color: #19c880;
 }
 
+/* Style du dropdown */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul > li {
+    position: relative;
+    padding: 10px 15px; /* Assure une taille fixe pour chaque item */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    text-decoration: none;
+    display: inline-block;
+    /*padding: 10px 15px;  */
+    color: #000; /* Couleur du texte */
+    white-space: nowrap; /* Empêche le texte de se couper */
+}
+
+.dropdown-menu {
+   /*  display: none; Caché par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
+    padding: 10px 0;
+    min-width: 250px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    background-color: #89878a;
+    padding: 5px 15px;
+    white-space: nowrap; /* Empêche les options de se couper */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000; /* Couleur du texte */
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0; /* Couleur sur hover */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Montre le menu quand on passe la souris */
+}
+
+
 /*
 # Menu SHopping Cart
 --------------------------------*/

@@ -1,8 +1,7 @@
 package com.gestion_recrutement.controller;
 import com.gestion_recrutement.model.InscriptionModele;
 
-import com.gestion_recrutement.service.AdminDashboardService;
-import com.gestion_recrutement.model.Utilisateur;
+import com.gestion_recrutement.Service.AdminDashboardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

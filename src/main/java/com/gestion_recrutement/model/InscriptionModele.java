@@ -4,16 +4,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "TB_ETUDIANTS")
 public class InscriptionModele {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_ETUDIANT") // Colonne de la clé primaire (remplacez par la colonne réelle de la clé primaire)
     private Long id;
+
+    @Column(name = "NOM") // Nom de la colonne dans la base de données
     private String nom;
+
+    @Column(name = "PRENOM")
     private String prenom;
+
+    @Column(name = "ADRESSE_EMAIL")
     private String email;
+
+    @Column(name = "DT_DE_NAISSANCE")
     private String dateNaissance;
     private String date_inscription;
     private String annee_scolaire;

@@ -1,9 +1,9 @@
-package com.gestion_recrutement.service;
+package com.gestion_recrutement.Service;
 
 import com.gestion_recrutement.model.InscriptionModele;
 import com.gestion_recrutement.repository.InscriptionRepository;
-import com.gestion_recrutement.repository.AdminDashboardRepository;
-import com.gestion_recrutement.model.Utilisateur;
+//import repository.AdminDashboardRepository;
+//import model.Utilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
