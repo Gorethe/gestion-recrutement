@@ -15,8 +15,10 @@ public class InscriptionModele {
     private String prenom;
     private String email;
     private String dateNaissance;
-    private String classe;
+    private String date_inscription;
+    private String annee_scolaire;
     private String telephone;
+    private String documents;
 
     // Getters et setters
 
@@ -60,12 +62,16 @@ public class InscriptionModele {
         this.dateNaissance = dateNaissance;
     }
 
-    public String getClasse() {
-        return classe;
+    public String getDate_inscription() {return date_inscription; }
+
+    public void setDate_inscription(String date_inscription) {this.date_inscription = date_inscription;}
+
+    public String getAnnee_scolaire() {
+        return annee_scolaire;
     }
 
-    public void setClasse(String classe) {
-        this.classe = classe;
+    public void setAnnee_scolaire(String annee_scolaire) {
+        this.annee_scolaire = annee_scolaire;
     }
 
     public String getTelephone() {
@@ -75,5 +81,14 @@ public class InscriptionModele {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
+
+    public String getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(String documents) {
+        this.documents = documents;
+    }
+
 }
 

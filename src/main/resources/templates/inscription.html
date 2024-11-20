@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Home | School</title>
 
@@ -117,11 +117,20 @@
                                 <label for="date_naissance">Date de naissance:</label>
                                 <input type="date" id="date_naissance" name="dateNaissance" required>
 
-                                <label for="classe">Classe:</label>
-                                <input type="text" id="classe" name="classe" required>
+                                <label for="date_inscription">Date d'Inscription:</label>
+                                <input type="date" id="date_inscription" name="date_inscription" required>
+
+
+                                <label for="annee_scolaire">Année Scolaire:</label>
+                                <input type="text" id="annee_scolaire" name="annee_scolaire" pattern="\d{4}-\d{4}" placeholder="Ex: 2024-2025" required>
 
                                 <label for="telephone">Numéro de téléphone:</label>
                                 <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="0123456789" required><br>
+
+                                <div class="upload-documents">
+                                    <label for="documents">Document:</label>
+                                    <input type="file" id="documents" name="documents" accept="application/pdf" multiple required>
+                                </div>
 
                                 <button class="form-button" type="submit">S'inscrire</button>
                             </form>
@@ -247,43 +256,24 @@
     <h1 th:text="${message}">fini</h1> <!-- Affiche le message-->
 </div>
 
+<script>
+    // Récupérer la date actuelle au format yyyy-mm-dd
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // Janvier est 0
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+    // Assigner la date actuelle comme valeur par défaut
+    document.getElementById("date_inscription").value = today;
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
-<!--
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription Élève</title>
-    <link rel="stylesheet" href="/css/inscription.css">
-</head>
-<body>
-<div class="container">
-    <h1>Formulaire d'Inscription</h1>
-    <form action="/inscription" method="POST">
-        <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom" required><br>
-
-        <label for="prenom">Prénom:</label>
-        <input type="text" id="prenom" name="prenom" required><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="date_naissance">Date de naissance:</label>
-        <input type="date" id="date_naissance" name="dateNaissance" required><br>
-
-        <label for="classe">Classe:</label>
-        <input type="text" id="classe" name="classe" required><br>
-
-        <label for="telephone">Numéro de téléphone:</label>
-        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="0123456789" required><br>
-
-        <button type="submit">S'inscrire</button>
-    </form>
-</div>
-</body>
-</html>
--->

@@ -23,9 +23,12 @@ public class SoumissionFormulaireController {
                                          @RequestParam String prenom,
                                          @RequestParam String email,
                                          @RequestParam String dateNaissance,
-                                         @RequestParam String classe,
-                                         @RequestParam String telephone) {
-        serviceSoumissionFormulaire.enregistrerInscription(nom, prenom, email, dateNaissance, classe, telephone);
+                                         @RequestParam String date_inscription,
+                                         @RequestParam String annee_scolaire,
+                                         @RequestParam String telephone,
+                                         @RequestParam String documents)
+    {
+        serviceSoumissionFormulaire.enregistrerInscription(nom, prenom, email, dateNaissance, date_inscription,annee_scolaire, telephone,documents);
         return "redirect:/";
 //        return "redirect:/confirmation";
     }

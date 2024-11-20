@@ -616,20 +616,77 @@ a:hover, a:active {
     height: 600px; /* Hauteur du formulaire */
     padding: 20px; /* Espace intérieur pour plus de confort */
     box-sizing: border-box; /* Inclut le padding dans la largeur et la hauteur */
-    border: 1px solid #ccc; /* Bordure pour délimiter le formulaire */
+    /*border: 1px solid red; /* Bordure pour délimiter le formulaire */
     border-radius: 8px; /* Coins arrondis */
     display: flex;
     flex-direction: column;
     color: white;
 }
 
+.upload-documents, .upload-photo-passeport {
+    margin-bottom: 20px;
+    position: absolute;
+    padding: 15px;
+    border: 2px solid rgba(204, 204, 204, 0.5); /* Bordure transparente */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3); /* Fond transparent */
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    max-width: 500px;
+}
+
+.upload-documents {
+    top: 90px; /* Déplacer à 20px du haut du parent */
+    left: 450px; /* Déplacer à 10px de la gauche du parent */
+}
+
+.upload-photo-passeport {
+    top: 250px; /* Déplacer à 20px du haut du parent */
+    left: 450px; /* Déplacer à 300px de la gauche du parent (ajustez selon vos besoins) */
+}
+
+.upload-documents label, .upload-photo-passeport label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.upload-documents input[type="file"], .upload-photo-passeport input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6); /* Fond légèrement transparent pour l'input */
+}
+
 .form-container {
+    position: relative;
+    border: 1px solid white;
     margin: 50px auto;
-    padding: 20px;
-   /* background-color: white;  Largeur du conteneur */
+    width: 1000px;
+     /*padding: 20px;*/
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+label[for="date_inscription"], input#date_inscription {
+    position: relative;
+    left: 440px; /* Décale le champ et son label */
+   width: 350px; /* Ajuste la largeur de l'input selon tes besoins */
+   top: -80px
+}
+label[for="annee_scolaire"], input#annee_scolaire {
+    position: relative;
+    left: 440px; /* Décale le champ et son label */
+   width: 350px; /* Ajuste la largeur de l'input selon tes besoins */
+   top: -70px
+}
+label[for="telephone"], input#telephone {
+    position: relative;
+    /*left: 440px; /* Décale le champ et son label */
+   /*width: 350px; /* Ajuste la largeur de l'input selon tes besoins */
+   top: -145px
+}
+
 
 .form-title {
     text-align: center;
@@ -657,6 +714,10 @@ label {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    position:relative;
+    margin: 20px;
+    margin-top: -90px;
+
 }
 
 .course-cost {
@@ -2773,3 +2834,8 @@ p.footer-copyright {
 .footer-bar-nav ul li a:hover {
     color: #34d986;
 }
+
+/*--------------------------------------------------------------
+# div documents vs photo
+--------------------------------------------------------------*/
+
